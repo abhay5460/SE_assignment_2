@@ -1,4 +1,4 @@
-/* Pattern	A B C D E 
+/* Pattern	        A B C D E 
 			A B C D
 			A B C
 			A B 
