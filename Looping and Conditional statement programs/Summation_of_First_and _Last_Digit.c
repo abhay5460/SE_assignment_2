@@ -6,20 +6,17 @@ int main()
 
     printf("Enter a number: ");
     scanf("%d", &num);
-
-    // Calculate the first digit
+    
     first_digit = num;
-    while (first_digit >= 10) {
+    
+    while (first_digit >= 10) 
+    {
         first_digit /= 10;
     }
-
-    // Calculate the last digit
+    
     last_digit = num % 10;
-
-    // Calculate the sum
-    sum = first_digit - last_digit;
+    
+    sum = first_digit + last_digit;
 
     printf("The summation of the first and last digit is: %d\n", sum);
-
-    return 0;
 }
