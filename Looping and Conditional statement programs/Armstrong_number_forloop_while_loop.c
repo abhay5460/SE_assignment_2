@@ -1,36 +1,27 @@
 // 12. Program of Armstrong Number in C Using For Loop & While Loop.
 #include <stdio.h>
-
-int main() {
-    int num, temp, sum = 0, digit, count = 0;
+int main()
+{
+   int num, temp, rem, arm=0;
 
     printf("Enter a number: ");
     scanf("%d", &num);
 
     temp = num;
 
-    // Count the number of digits
-    for (digit = temp; digit != 0; digit /= 10) {
-        count++;
+    while(num>0)
+	{ 
+		rem=num%10;
+		arm=(rem*rem*rem) + arm;
+		num=num/10;
+	}
+	
+    if (temp == arm) 
+	{
+        printf("%d is an Armstrong number.\n", temp);
+    } 
+	else 
+	{
+        printf("%d is not an Armstrong number.\n", temp);
     }
-
-    temp = num;
-
-    // Calculate the sum of each digit raised to the power of the number of digits
-    for (digit = temp; digit != 0; digit /= 10) {
-        int power = 1;
-        int n = digit % 10;
-        for (int i = 1; i <= count; i++) {
-            power *= n;
-        }
-        sum += power;
-    }
-
-    if (sum == num) {
-        printf("%d is an Armstrong number.\n", num);
-    } else {
-        printf("%d is not an Armstrong number.\n", num);
-    }
-
-    return 0;
 }
